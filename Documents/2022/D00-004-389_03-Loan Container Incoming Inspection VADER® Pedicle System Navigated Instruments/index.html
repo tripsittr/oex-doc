@@ -6,41 +6,11 @@
   <title>D00-004-389_03-Loan Container Incoming Inspection VADER® Pedicle System Navigated Instruments.pdf</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    html, body { height: 100%; background: #404040; font-family: sans-serif; }
-    header { background: #222; color: #fff; padding: 10px 16px; font-size: 13px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; position: fixed; top: 0; left: 0; right: 0; z-index: 10; }
-    #viewer { position: fixed; top: 36px; left: 0; right: 0; bottom: 0; }
-    canvas { display: block; margin: 16px auto; box-shadow: 0 2px 8px rgba(0,0,0,.5); }
-    #loading { color: #ccc; text-align: center; padding-top: 40px; }
+    html, body { height: 100%; background: #404040; }
+    embed { display: block; width: 100%; height: 100%; }
   </style>
 </head>
 <body>
-  <header>D00-004-389_03-Loan Container Incoming Inspection VADER® Pedicle System Navigated Instruments.pdf</header>
-  <div id="viewer"><div id="loading">Loading PDF...</div></div>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
-  <script>
-    pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
-
-    const url = "https:\/\/raw.githubusercontent.com\/tripsittr\/oex-doc\/main\/Documents\/2022\/D00-004-389_03-Loan Container Incoming Inspection VADER\u00ae Pedicle System Navigated Instruments.pdf";
-    const viewer = document.getElementById('viewer');
-
-    pdfjsLib.getDocument(url).promise.then(function(pdf) {
-      viewer.innerHTML = '';
-      const renders = [];
-      for (let i = 1; i <= pdf.numPages; i++) {
-        renders.push(pdf.getPage(i).then(function(page) {
-          const scale = Math.min((window.innerWidth - 32) / page.getViewport({scale: 1}).width, 2);
-          const viewport = page.getViewport({scale});
-          const canvas = document.createElement('canvas');
-          canvas.width = viewport.width;
-          canvas.height = viewport.height;
-          viewer.appendChild(canvas);
-          return page.render({canvasContext: canvas.getContext('2d'), viewport}).promise;
-        }));
-      }
-      return Promise.all(renders);
-    }).catch(function(err) {
-      viewer.innerHTML = '<div id="loading">Failed to load PDF: ' + err.message + '</div>';
-    });
-  </script>
+  <embed src="https://raw.githubusercontent.com/tripsittr/oex-doc/main/Documents/2022/D00-004-389_03-Loan Container Incoming Inspection VADER® Pedicle System Navigated Instruments.pdf" type="application/pdf">
 </body>
 </html>
